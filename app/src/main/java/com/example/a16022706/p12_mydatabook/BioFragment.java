@@ -1,9 +1,7 @@
 package com.example.a16022706.p12_mydatabook;
 
 
-import android.content.Context;
 import android.content.DialogInterface;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
@@ -13,10 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import java.util.Random;
 
 
 /**
@@ -50,13 +45,13 @@ public class BioFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                View view = inflater.inflate(R.layout.editBox, null);
+                View view = inflater.inflate(R.layout.editbox, null);
 
                 final EditText etEditBio = (EditText) view
-                        .findViewById(R.id.editTextEditBio);
+                        .findViewById(R.id.editTextEditFragments);
 
                 final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setTitle("Access Code")
+                builder.setTitle("Edit Bio")
 
 
                         .setView(view)
@@ -78,15 +73,6 @@ public class BioFragment extends Fragment {
                             public void onClick(DialogInterface dialog, int id) {
                                 String input = etEditBio.getText().toString();
                                 tvEditedBio.setText(input);
-
-
-//                                int code = Integer.parseInt(etAccessCode.getText().toString());
-//                                if (code == 738964) {
-//
-//                                } else {
-//                                    finish();
-//
-//                                }
                             }
                         });
                 AlertDialog alertDialog = builder.create();
