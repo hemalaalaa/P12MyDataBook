@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">P12 -My Data Book</string>
+
+
+    <string name="drawer_open"></string>
+    <string name="drawer_close"></string>
+</resources>
